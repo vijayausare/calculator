@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clc</title>
+    <link rel="stylesheet" href="/Project/css/bootstrap.min.css">
+    <style>
+        table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        background:darkgrey;
+        
+    }
+    #val{
+        height: 50px;
+        background: burlywood;
+    }
+    table tr,td{
+        padding: 8px;
+    }
+    .center{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+</head>
+<body>
+    
+    <table class="center" >
+            <tr>
+                <td colspan="4">
+                <div > <input type="text" id="val"></div>
+                </td>
+            </tr><hr>
+            <tr>
+                <td><input type="button" value="1" onclick="display('1')"></td>
+                <td><input type="button" value="2" onclick="display('2')"></td>
+                <td><input type="button" value="3" onclick="display('3')"></td> 
+                <td><input type="button" value="*" onclick="display('*')"></td>   
+            
+            </tr>
+            <tr>
+                <td><input type="button" value="4" onclick="display('4')"></td>
+                <td><input type="button" value="5" onclick="display('5')"></td>
+                <td><input type="button" value="6" onclick="display('6')"></td> 
+                <td><input type="button" value="+" onclick="display('+')"></td>   
+                
+            </tr>
+        <tr>
+            <td><input type="button" value="7" onclick="display('7')"></td>
+            <td><input type="button" value="8" onclick="display('8')"></td>
+            <td><input type="button" value="9" onclick="display('9')"></td> 
+            <td><input type="button" value="-" onclick="display('-')"></td>   
+            
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="display('0')"></td>
+            <td><input type="button" value="/" onclick="display('/')"></td> 
+            <td><input type="button" value="=" onclick="find()"></td>   
+            <td><input type="button" value="C" onclick="clr()"></td>   
+
+        </tr>
+       </table>
+       <!-- <div><input type="text " id="demo"></div> -->
+
+       <script>
+           let y, x=0;
+           let mulx=1;
+           let muly=1;
+           function display(val){  
+            document.getElementById("val").value+=val;
+    
+           }
+           function clr(){
+               document.getElementById("val").value="";
+           }
+           function find()
+         {
+             let x = document.getElementById("val").value
+             let y = eval(x)
+             document.getElementById("val").value = y
+         }
+       </script>
+ 
+       
+</body>
+</html>
